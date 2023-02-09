@@ -3,4 +3,6 @@
 /* eslint-disable */
 import type * as tokenSol from "./Token.sol";
 export type { tokenSol };
+export type { FLPCrowdSale } from "./FLPCrowdSale";
+export type { USDT } from "./USDT";
 export type { Vault } from "./Vault";

@@ -30,7 +30,11 @@ export type { ERC165 } from "./@openzeppelin/contracts/utils/introspection/ERC16
 export { ERC165__factory } from "./factories/@openzeppelin/contracts/utils/introspection/ERC165__factory";
 export type { IERC165 } from "./@openzeppelin/contracts/utils/introspection/IERC165";
 export { IERC165__factory } from "./factories/@openzeppelin/contracts/utils/introspection/IERC165__factory";
+export type { FLPCrowdSale } from "./contracts/FLPCrowdSale";
+export { FLPCrowdSale__factory } from "./factories/contracts/FLPCrowdSale__factory";
 export type { Floppy } from "./contracts/Token.sol/Floppy";
 export { Floppy__factory } from "./factories/contracts/Token.sol/Floppy__factory";
+export type { USDT } from "./contracts/USDT";
+export { USDT__factory } from "./factories/contracts/USDT__factory";
 export type { Vault } from "./contracts/Vault";
 export { Vault__factory } from "./factories/contracts/Vault__factory";

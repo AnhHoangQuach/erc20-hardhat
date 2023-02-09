@@ -2,4 +2,6 @@
 /* tslint:disable */
 /* eslint-disable */
 export * as tokenSol from "./Token.sol";
+export { FLPCrowdSale__factory } from "./FLPCrowdSale__factory";
+export { USDT__factory } from "./USDT__factory";
 export { Vault__factory } from "./Vault__factory";

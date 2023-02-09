@@ -61,9 +61,17 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.IERC165__factory>;
     getContractFactory(
+      name: "FLPCrowdSale",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.FLPCrowdSale__factory>;
+    getContractFactory(
       name: "Floppy",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.Floppy__factory>;
+    getContractFactory(
+      name: "USDT",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.USDT__factory>;
     getContractFactory(
       name: "Vault",
       signerOrOptions?: ethers.Signer | FactoryOptions
@@ -130,10 +138,20 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.IERC165>;
     getContractAt(
+      name: "FLPCrowdSale",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.FLPCrowdSale>;
+    getContractAt(
       name: "Floppy",
       address: string,
       signer?: ethers.Signer
     ): Promise<Contracts.Floppy>;
+    getContractAt(
+      name: "USDT",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.USDT>;
     getContractAt(
       name: "Vault",
       address: string,

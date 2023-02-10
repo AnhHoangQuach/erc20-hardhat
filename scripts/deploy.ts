@@ -17,10 +17,20 @@ async function main() {
   // console.log('Floppy address: ', vault.address)
   // Config.setConfig(network + '.Vault', vault.address)
 
-  const Floppy = await ethers.getContractFactory('USDT')
-  const floppy = await Floppy.deploy()
-  console.log('USDT address: ', floppy.address)
-  Config.setConfig(network + '.USDT', floppy.address)
+  // const Floppy = await ethers.getContractFactory('USDT')
+  // const floppy = await Floppy.deploy()
+  // console.log('USDT address: ', floppy.address)
+  // Config.setConfig(network + '.USDT', floppy.address)
+
+  const Ico = await ethers.getContractFactory('FLPCrowdSale')
+  const ico = await Ico.deploy(
+    1000,
+    100,
+    '0xa392623f74305AE72A7BCDEFec9D9F4c33e9ee62',
+    '0x4cD1a253Cd7C905D9C598F8660712fD411DdF664'
+  )
+  console.log('ICO address: ', ico.address)
+  Config.setConfig(network + '.ico', ico.address)
 
   await Config.updateConfig()
 }

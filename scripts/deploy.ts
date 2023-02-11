@@ -22,15 +22,36 @@ async function main() {
   // console.log('USDT address: ', usdt.address)
   // Config.setConfig(network + '.USDT', usdt.address)
 
-  const Ico = await ethers.getContractFactory('FLPCrowdSale')
-  const ico = await Ico.deploy(
-    10000,
-    10000,
-    '0x0C02446CE83F6673C57449b9e893920F5dE1Bd23',
+  // const Ico = await ethers.getContractFactory('FLPCrowdSale')
+  // const ico = await Ico.deploy(
+  //   10000,
+  //   10000,
+  //   '0x0C02446CE83F6673C57449b9e893920F5dE1Bd23',
+  //   '0x0D5DF3d2E23D1f9940D78326f15c8d01EB809892'
+  // )
+  // console.log('ICO address: ', ico.address)
+  // Config.setConfig(network + '.ico', ico.address)
+
+  // const Hero = await ethers.getContractFactory('Hero')
+  // const hero = await Hero.deploy()
+  // console.log('stman hero address: ', hero.address)
+  // Config.setConfig(network + '.Hero', hero.address)
+
+  // const MKP = await ethers.getContractFactory('HeroMarketplace')
+  // const heroMarketplace = await MKP.deploy(
+  //   '0xb333560B1f615524a31707b42eEe4845b22d4c87',
+  //   '0x0D5DF3d2E23D1f9940D78326f15c8d01EB809892'
+  // )
+  // console.log('Market deployed at: ', heroMarketplace.address)
+
+  const Auction = await ethers.getContractFactory('Auction')
+  const auction = await Auction.deploy(
+    '0xb333560B1f615524a31707b42eEe4845b22d4c87',
     '0x0D5DF3d2E23D1f9940D78326f15c8d01EB809892'
   )
-  console.log('ICO address: ', ico.address)
-  Config.setConfig(network + '.ico', ico.address)
+  console.log('Market deployed at: ', auction.address)
+
+  Config.setConfig(network + '.Auction', auction.address)
 
   await Config.updateConfig()
 }
